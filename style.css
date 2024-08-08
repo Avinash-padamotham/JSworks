@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+
+}
+.navbar {
+  background-color: #333333;
+  position: sticky;
+  opacity: 80%;
+}
+ .navbar {
+  background-color: rgb(42, 48, 67); 
+} 
+
+.navbar-nav .nav-item {
+  margin-left: 20px; 
+}
+
+
+.navbar-brand, .nav-link {
+  color: #ffffff; 
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: rgb(160, 176, 219); 
+}
+
+
+.navbar-toggler-icon {
+  background-image: none; 
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px; 
+  background-color: #ffffff; 
+  position: absolute;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+
+.navbar-toggler-icon::before {
+  top: 6px; 
+}
+
+.navbar-toggler-icon::after {
+  bottom: 6px; 
+}
+
+.navbar-toggler-icon span {
+  display: block;
+  width: 100%;
+  height: 3px; 
+  background-color: #ffffff; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+.btn-outline-success {
+  background-color: transparent; 
+  border-color: whitesmoke; 
+}
+
+
+.btn-outline-success i {
+  color: whitesmoke;
+}
+
+
+.btn-outline-success:hover {
+  background-color: whitesmoke; 
+  border-color: whitesmoke; 
+}
+
+
+.btn-outline-success:hover i {
+  color: rgb(42, 48, 67); 
+}
+
+
+
+footer {
+  background-color: rgb(42, 48, 67); 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 7%;
+  opacity: 80%;
+}
+
+
+.card {
+  margin-bottom: 30px;
+  margin-right: 10px
+}
+
+
+
+
+.card-title {
+  font-size: 1.25rem;
+
+}
+
+h5 {
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #FFD700;
+  border: none;
+  color: #333333;
+}
+
+.add-to-cart:hover {
+  background-color: #C0C0C0;
+  color: #FFFFFF;
+}
+
+#cart-icon img {
+  width: 30px;
+}
+
+.badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.dropdown-menu {
+  color: #FFFFFF;
+}
+
+
+.navbar .dropdown-menu {
+  padding: 15px;
+  background-color: rgb(32, 38, 57); /* Light grey background */
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  min-width: 250px; /* Minimum width to keep the form spacious */
+}
+
+/* Style the dropdown input fields */
+.navbar .dropdown-menu input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Style the submit button */
+.navbar .dropdown-menu .SubBtn {
+  width: 100%;
+  padding: 10px;
+  background-color:rgb(42, 48, 67); /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.navbar .dropdown-menu .SubBtn:hover {
+  background-color: rgb(160, 176, 219); /* Darker blue on hover */
+}
+
+/* Adjust the position of the dropdown menu */
+.navbar .dropdown-menu {
+  right: 0; /* Aligns dropdown to the right edge of the nav-item */
+}
+
+/* Optional: Add a little space between the nav-item and the dropdown */
+.navbar .nav-item.dropdown .nav-link {
+  padding-right: 0.75rem;
+}

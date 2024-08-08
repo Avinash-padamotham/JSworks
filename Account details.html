@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #account-details {
+            display: none;
+        }
+        
+        body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #ffecde;
+      background-image: url('bank.png');
+      background-size: 25%;
+      backdrop-filter: blur(5px); 
+  }
+  
+  .card {
+     width: 50%;
+     margin: 25%; 
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+     background-color: #EEB45E;
+     border-radius: 10px;
+     color: #1A1A1A;
+  }
+  
+  .sub {
+    background-color: #1A1A1A;
+    color: white;
+    border: #1A1A1A;
+  }
+
+  .sub:hover {
+    background-color: #ffecde;
+    border: #ffecde;
+    color: #1A1A1A; 
+
+  }
+        
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="login" class="card">
+            <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary sub">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="account-details" class="card">
+            <div class="card-body">
+                <h5 class="card-title">Account Details</h5>
+                <p><b>Account Holder Name:</b> Padamotham Avinash</p>
+                <p><b>Account Number:</b> ********4390</p>
+                <p><b>Mobile Number:</b> +91 8341850612</p>
+                <p><b>Available Balance:</b> <label id="bal">5000</label></p>
+                <button id="credit" class="btn btn-success">CREDIT</button>
+                <button id="debit" class="btn btn-danger">DEBIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let balance = 5000;
+
+        
+        function updateBalance() {
+            document.getElementById("bal").textContent = balance;
+        }
+
+        
+        document.getElementById("credit").addEventListener("click", () => {
+            let amount = parseFloat(prompt("Enter amount to credit"));
+            if (!isNaN(amount) && amount > 0) {
+                balance += amount;
+                updateBalance();
+            } else {
+                alert("Please enter a valid amount");
+            }
+        });
+
+        
+        document.getElementById("debit").addEventListener("click", () => {
+            let amount = parseFloat(prompt("Enter amount to debit"));
+            if (!isNaN(amount) && amount > 0 && amount <= balance) {
+                balance -= amount;
+                updateBalance();
+            } else {
+                alert("Please enter a valid amount or ensure sufficient balance");
+            }
+        });
+
+        
+        updateBalance();
+
+        // Password protection
+        const correctPassword = "1234";
+        document.getElementById("login-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const password = document.getElementById("password").value;
+            if (password === correctPassword) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("account-details").style.display = "block";
+            } else {
+                alert("Incorrect password");
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Shopping Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#">CAMERAS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Support</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Filter
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <form action="">
+                            <input type="number" id="min" placeholder="Enter Min value" />
+                            <input type="number" id="max" placeholder="Enter Max value" />
+                            <input type="button" value="Submit" class="SubBtn">
+                        </form>
+
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+
+                <li class="nav-item" >
+                    <a class="nav-link" href="#" id="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge badge-pill badge-danger" id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="10000">
+            <img src="https://img.freepik.com/free-photo/collection-cameras-near-rows-film_23-2147852538.jpg?ga=GA1.1.81439913.1723138538&semt=ais_hybrid" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-interval="2000">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> -->
+
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4 box" data-value="500">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067030.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 1</h5>
+                        <p class="card-text">$500.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="650">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067031.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 2</h5>
+                        <p class="card-text">$650.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="625">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720834.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 3</h5>
+                        <p class="card-text">$625.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="300">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/3d-cinema-projector_23-2151005405.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 4</h5>
+                        <p class="card-text">$300.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="900">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720838.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 5</h5>
+                        <p class="card-text">$900.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="550">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720838.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 6</h5>
+                        <p class="card-text">$550.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="1005">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720762.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 7</h5>
+                        <p class="card-text">$1005.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 box" data-value="890">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067034.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 8</h5>
+                        <p class="card-text">$890.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 box" data-value="1500">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067011.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 9</h5>
+                        <p class="card-text">$1500.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 box" data-value="1200">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067030.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 10</h5>
+                        <p class="card-text">$1200.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="825">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067031.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 11</h5>
+                        <p class="card-text">$825.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="300">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720834.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 12</h5>
+                        <p class="card-text">$300.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="170">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/3d-cinema-projector_23-2151005405.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 13</h5>
+                        <p class="card-text">$170.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="475">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720838.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 14</h5>
+                        <p class="card-text">$475.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="499">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720838.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 15</h5>
+                        <p class="card-text">$499.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="670">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720762.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 16</h5>
+                        <p class="card-text">$670.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 box" data-value="780">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067034.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 17</h5>
+                        <p class="card-text">$780.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 box" data-value="530">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067011.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 18</h5>
+                        <p class="card-text">$530.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 box" data-value="975">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067030.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 19</h5>
+                        <p class="card-text">$975.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="990">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067031.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 20</h5>
+                        <p class="card-text">$990.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="600">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720834.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 21</h5>
+                        <p class="card-text">$600.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="100">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/3d-cinema-projector_23-2151005405.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 22</h5>
+                        <p class="card-text">$100.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="555">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720838.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 23</h5>
+                        <p class="card-text">$555.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="150">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720838.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 24</h5>
+                        <p class="card-text">$150.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 box" data-value="435">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-expensive-high-tech-movie-camera_23-2150720762.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 25</h5>
+                        <p class="card-text">$435.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 box" data-value="3300">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067034.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 26</h5>
+                        <p class="card-text">$3300.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 box" data-value="1000">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/view-3d-camera_23-2151067011.jpg?ga=GA1.1.102632803.1690349829" class="card-img-top" alt="Camera 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Camera 27</h5>
+                        <p class="card-text">$1000.00</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="modal fade" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cart-items" class="list-group">
+                        
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <footer class=" text-white text-center py-3">
+        <p>&copy; 2024 Camera Shopping Website</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
